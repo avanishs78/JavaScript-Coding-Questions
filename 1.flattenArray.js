@@ -1,4 +1,4 @@
-// Polyfill for flat method of Array
+// Custom function for flat method of Array
 function flatten(array){
     let result = [];
     function subArr(arr){
