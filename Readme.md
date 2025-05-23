@@ -1,5 +1,5 @@
-### Q1. Write a custom function for flat method of Array.
-#### *Hint*: Use Recursion
+#### Q1. Write a custom function for flat method of Array.
+##### *Hint*: Use Recursion
 ```
 function flatten(array){
     let result = [];
@@ -18,7 +18,7 @@ console.log(output);
 ```
 
 #### Q2. Write a function to check balanced brackets in a string which contains only these brackts: {},[],()
-#### *Hint*: Use Stack method
+##### *Hint*: Use Stack method
 ```
 function bakancedBrackets(str){
      let stack = [];
@@ -41,10 +41,10 @@ const result = bakancedBrackets(testData);
 console.log(result);
 ```
 
-### Q3. Given an array nums of n integers where n > 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i], without using division, and in O(n) time. You must solve it without using the division operator and with constant extra space (excluding the output array).
-#### *Hint*: a. Builds left: left[i] contains the product of all elements before index i.
-####         b. Builds right: right[i] contains the product of all elements after index i.
-####         c. Final product: productArr[i] = left[i] * right[i].
+#### Q3. Given an array nums of n integers where n > 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i], without using division, and in O(n) time. You must solve it without using the division operator and with constant extra space (excluding the output array).
+##### *Hint*: a. Builds left: left[i] contains the product of all elements before index i.
+#####         b. Builds right: right[i] contains the product of all elements after index i.
+#####         c. Final product: productArr[i] = left[i] * right[i].
 ```
 function productOfArray(arr){
     let left = [];
