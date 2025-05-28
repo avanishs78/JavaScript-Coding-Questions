@@ -68,3 +68,53 @@ function productOfArray(arr){
 let testData = [1,2,3,4];
 console.log(productOfArray(testData));
 ```
+#### Q4. Implement a throttle function that ensures the mouse position is logged at most once every 1000 milliseconds, regardless of how often the event fires.
+```
+function throttle(callback, delay) {
+  let isThrottled = false;
+
+  return function (...args) {
+    if (!isThrottled) {
+      callback.apply(this, args);
+      isThrottled = true;
+
+      setTimeout(() => {
+        isThrottled = false;
+      }, delay);
+    }
+  };
+}
+
+function logMousePosition(x, y) {
+  console.log(`Mouse position = (${x}, ${y})`);
+}
+
+const throttledMouseLogger = throttle(logMousePosition, 1000);
+
+window.addEventListener('mousemove', (event) => {
+  throttledMouseLogger(event.clientX, event.clientY);
+});
+```
+#### Q4. Implement a debounce function that ensures the mouse position is logged when user takes a pause of 1000 milliseconds, regardless of how often the event fires.
+```
+function debounce(callback, delay) {
+  let timeoutId;
+
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      callback.apply(this, args);
+    }, delay);
+  };
+}
+
+function logMousePosition(x, y) {
+  console.log(`Mouse position = (${x}, ${y})`);
+}
+
+const debouncedMouseLogger = debounce(logMousePosition, 1000);
+
+window.addEventListener('mousemove', (event) => {
+  debouncedMouseLogger(event.clientX, event.clientY);
+});
+```
