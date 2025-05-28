@@ -95,7 +95,7 @@ window.addEventListener('mousemove', (event) => {
   throttledMouseLogger(event.clientX, event.clientY);
 });
 ```
-#### Q4. Implement a debounce function that ensures the mouse position is logged when user takes a pause of 1000 milliseconds, regardless of how often the event fires.
+#### Q5. Implement a debounce function that ensures the mouse position is logged when user takes a pause of 1000 milliseconds, regardless of how often the event fires.
 ```
 function debounce(callback, delay) {
   let timeoutId;
