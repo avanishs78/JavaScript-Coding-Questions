@@ -118,3 +118,23 @@ window.addEventListener('mousemove', (event) => {
   debouncedMouseLogger(event.clientX, event.clientY);
 });
 ```
+#### Q6. Insert a given character in a given string after every 3rd character, starting from the end of the string.
+```
+function insertChar(inputStr, charToInsert) {
+  const modifiedChars = [];
+  let charCount = 0;
+
+  for (let i = inputStr.length - 1; i >= 0; i--) {
+    modifiedChars.push(inputStr[i]);
+    charCount++;
+
+    if (charCount % 3 === 0 && i !== 0) {
+      modifiedChars.push(charToInsert);
+    }
+  }
+
+  return modifiedChars.reverse().join('');
+}
+
+console.log(insertChar('abcdefghjk','r')); // abcrdefrghjrk
+```
