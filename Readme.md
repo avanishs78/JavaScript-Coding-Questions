@@ -138,3 +138,17 @@ function insertChar(inputStr, charToInsert) {
 
 console.log(insertChar('abcdefghjk','r')); // abcrdefrghjrk
 ```
+#### Q7. Given two array, one having array elements and second having some index values. Delete those elements from array whose index value is present in index array.
+```
+let arr = ['a','b','c','d','e'];
+
+let indexes = [3,1];
+
+for(let i=arr.length-1;i>=0;i--){
+    if(indexes.includes(i)) {
+        arr.splice(i,1);
+    }
+}
+
+console.log(arr);
+```
