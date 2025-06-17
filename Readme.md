@@ -152,3 +152,17 @@ for(let i=arr.length-1;i>=0;i--){
 
 console.log(arr);
 ```
+#### Q8. Find the first unique character (non repeating) in a given string.
+```
+function firstUniqueChar(str){
+    let arr = str.split('');
+    for(let i=0;i<arr.length;i++){
+        let element = arr[i];
+        if(arr.indexOf(element)===arr.lastIndexOf(element)){
+            return element;
+        }
+    }
+}
+let input_string = 'aaabbccdef';
+console.log(firstUniqueChar(input_string));
+```
